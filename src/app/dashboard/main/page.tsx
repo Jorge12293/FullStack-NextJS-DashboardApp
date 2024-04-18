@@ -1,7 +1,11 @@
+import { WidgetsGrid } from "@/components/dashboard/WidgetsGrid";
+
 export default function MainPage(){
     return (
-        <div>
-            <h1>Page Main</h1>
+        <div className="text-black p-2">
+            <h1 className="mt-2 text-3xl">Dashboard</h1>
+            <span className="text-xl">Description General</span>
+            <WidgetsGrid />
         </div>
     )
 }

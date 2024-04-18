@@ -14,6 +14,7 @@ export interface CounterResponse {
 }
 
 
+
 const getApiCounter = async(): Promise<CounterResponse> => {
    const data  = await fetch('/api/counter').then(res=>res.json());
    return data;
@@ -22,8 +23,9 @@ const getApiCounter = async(): Promise<CounterResponse> => {
 export const CartCounter = ({value=0}:Props) => {
    //const [count, setCount] = useState(value);
 
-  const count = useAppSelector(state => state.counterReducer.count)  
+  const count = useAppSelector(state => state.counter.count)  
   const dispatch = useAppDispatch(); 
+  
   
 // Server
 useEffect(()=>{
